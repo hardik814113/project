@@ -1,0 +1,147 @@
+Q1. How to perform calculation directly from terminal? Which command is used?How to set limit of numbers to display after particular constant(say pi)?
+ans:-
+     We can do the calculation by two ways:
+     1.gcalccmd:-
+	It is the console version of calculator utility present in linux distribution like Ubuntu. To use the gcslccmd calculator tool, type the following command in the terminal :- gcalccmd.
+
+	After using these code calculation is simple. Just enter the numbers and desired operators in the terminal and press enter. You can also use brackets in your calculations.
+	ex:-
+		a. (5+10)+(13*2)				b. ln(10)
+		    41						    2.302585093
+Press CTRL+D to exit from gcalccmd tool and still remain on the command line.
+
+     2.Qalc:-
+	Qalc is the terminal version of the calculator app,Qualculate.It doesn't come pre-installed like gcalccmd .You bcan install Qalc using the following command in the terminal: sudo apt-get install qalc.
+	After installation, we use it for calculation. Just write expression and press enter,then answer will be printed.
+ 	Ex:- Qalc also remebers the answer from your last calculation. so you can go like this:
+	     50+100
+	     50    +	100	=150
+	     ans*10
+	     ans   *     10	=1500
+Press CTRL+D to exit qalc command line calculator utility.
+
+
+
+
+
+
+
+
+Q3.Commands used for finding memory usage?
+ans:- Commands are used for finding memory usage:-
+    1. free command:-
+	 the free command is the most  simple and easy to use command to check memory usage in linux.
+		Syntax:-     free -m
+	 the m option displays all the data in MBs. It gives all memory details of the total ram,used ram, free memory and cached amount of memory with buffers etc.
+
+    2. /proc/meeminfo:-
+	 the next way to check memory usage is to read the /proc/meminfo file. Know that the /proc file system does not contain real files. They are rather virtual files that contains dynamic information about the kernal and the system.
+	Check the values of Memtotal, Memfree, Buffers, Cached, SwapTotal, SwapFree. They indicates same values of memory usage as free command.
+		Syntax:-    cat /proc/meminfo
+
+    3. vmstat:-
+	 The vmstat command with the s option, lays out the memory usage statistics much like the proc command.
+		Syntax:-vmstat
+
+    4. top command:-
+          The top command is generally used to check memory and CPU usage per process.However it also reports total memory usage and can be used to monitor the total RAM usage. The header on output has required information.It gives total, used and free amounts of the memory. The buffer and cache information present here too,like free command.
+		Syntax:-top
+
+    5. htop:-
+	We can install it by command:-sudo apt install htop. Similar to the top command, the htop command also shows memory usage with various other details.The header on top shows CPU usage along with RAM and swap usage with corresponding figures.
+		Syntax:-  htop
+
+
+
+
+
+
+
+Q4. Write a command to find a file with perticularr extension and contains perticular word(String) in the file?
+ans:- We can find the perticular extension and contains perticular word in file using:
+
+				find . -name "String" | grep -R "Extension_name"
+so it can find all the files of that extention which contain the required name.
+
+
+
+
+
+
+
+Q5.Create a directory and move in the directory. Create another dirtectory inside this directory and move in it. Write a single command to come out in original directory.
+ans:-
+	*Create a directory
+		mkdir file_name
+	*move into that directory
+		cd file_name
+	*create another directory
+		mkdir file_inner
+	*move in it
+		cd file_inner
+	*comes out
+		cd ../..
+
+
+
+
+
+
+
+Q6. Why linux is more secured than other operating system? Find certain parameters comparing with other operating system?
+Ans:-
+     Linux is an operating system like iOS and windows. The popularity of the Linux OS has been increasing very raoidly and more smart devices with linux OS is developed now a days. The biggest reasons behind the enormous increase in the popularity of Linux is considered the high tech security system of the Linux. Linux is an open sourse operating system whose code can bbe easily read out by the users, but still, it is the more secure operating system when compared to the other OS.
+     Though linux is very simple but still very secure operating system, which protects the important files from the attack of viruses and malware. So if you are wondering how Linux is more secure than the giant operating systems, like iOS, Windows and Android then to better understand this,look at few advantages of Linux security.
+Certain parameters comparing with other operating system:-
+a. Different working environment
+b. strong community
+c. IPtables
+d. A perk of accounts
+e. Recording in Linux
+
+
+
+
+
+
+Q8. If you forget passsword how will you reset it?
+ans:-the following steps should be followed:-
+a. reboot to grub menu
+b. From reboot menu,select recovery mode and hit enter.
+c. You'll be presented with few options. Select the 'Drop to root shell Prompt' option and press enter.
+d. Once you're at the root shell prompt, if you have forgotten as username as well typr:-ls/home.this will list all the users accounts in your system.
+e. To reset password username where username is the username you want to reset.Ex:- passwd User
+f. you'll then be prompted for a new password. Type your new password and then hit enter.
+g. now password should be reset.type exit to rreturn to the recovery menu.
+h. After you get back to the recovery menu,select resume normal boot, and your password should work now.
+
+
+
+
+
+
+
+Q9.
+
+2.What is umask? 
+ans:- On linux and other Unix-like operating systems, new files are created with a default set of permissions. Specially, a new file's permissions may be restricted in a specific way by  applying a permissions "mask" called the umask.The umask command is used to set this mask, or to show you its current value.
+	Syntax:-umask [-S] [mask]
+
+
+
+
+
+
+
+3.Write the syntax for the command to delete a non empty directory and simultaneously all the files inside the directory must be deleted and write the syntax for moving file from anywhere to everywhere?
+ans:-
+	*Syntax for the command to delete a non empty directory and simultaneously all the files inside the directory must be deleted.
+		rm -r Directory_name
+	*Syntax for moving file from anywhere to everywhere
+		mv -v source_address destination_address
+	    ex:-mv -v /home/user/new /home/user/project
+
+
+
+
+
